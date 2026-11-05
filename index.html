@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- Primary Meta Tags -->
+  <title>JP DigiTech Solutions | High-Performance Web, Mobile & Custom Digital Systems</title>
+  <meta name="title" content="JP DigiTech Solutions | High-Performance Web, Mobile & Custom Digital Systems" />
+  <meta name="description"
+    content="JP DigiTech Solutions is a premier digital engineering agency specializing in high-speed website development, cross-platform mobile apps, and scalable custom enterprise software." />
+  <meta name="keywords"
+    content="JP DigiTech, website development, mobile app development, custom digital solutions, software development company, web design agency, Next.js, Flutter, React" />
+  <meta name="author" content="JP DigiTech Solutions" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jpdigitech.com/" />
+  <meta property="og:title" content="JP DigiTech Solutions | Modern Web, Mobile & Custom Digital Systems" />
+  <meta property="og:description"
+    content="Engineering lightning-fast web platforms, native mobile applications, and custom enterprise software that scale your revenue." />
+  <meta property="og:image" content="assets/images/logo.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="JP DigiTech Solutions | Next-Gen Software Development" />
+  <meta property="twitter:description"
+    content="Engineering high-speed web platforms, mobile apps, and custom digital software." />
+  <meta property="twitter:image" content="assets/images/logo.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- ================= HIDE NETLIFY BADGE (#nl-badge) ================= -->
+  <style>
+    #nl-badge,
+    .nl-badge,
+    #nl-card,
+    .nl-card,
+    .nl-badge-label,
+    .nl-badge-brand,
+    [class*="nl-badge"],
+    [id*="nl-badge"],
+    [class*="nl-card"],
+    [id*="nl-card"],
+    [aria-controls="nl-card"],
+    [aria-label*="Powered by Netlify"],
+    iframe#netlify-drawer,
+    iframe[src*="netlify"] {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      height: 0 !important;
+      width: 0 !important;
+      position: absolute !important;
+      left: -99999px !important;
+      top: -99999px !important;
+      clip: rect(0, 0, 0, 0) !important;
+      z-index: -99999 !important;
+    }
+  </style>
+
+  <script>
+    (function() {
+      function purgeNetlifyBadge() {
+        var els = document.querySelectorAll('#nl-badge, .nl-badge, #nl-card, .nl-card, [aria-controls="nl-card"], [aria-label*="Powered by Netlify"]');
+        for (var i = 0; i < els.length; i++) {
+          try {
+            els[i].style.setProperty('display', 'none', 'important');
+            els[i].remove();
+          } catch(e) {}
+        }
+      }
+      purgeNetlifyBadge();
+      document.addEventListener('DOMContentLoaded', purgeNetlifyBadge);
+      window.addEventListener('load', purgeNetlifyBadge);
+      try {
+        new MutationObserver(purgeNetlifyBadge).observe(document.documentElement, { childList: true, subtree: true });
+      } catch(e) {}
+    })();
+  </script>
+  <!-- ================================================================= -->
+</head>
+
+<body>
+
+  <!-- Ambient Glow Effects (Contained to prevent mobile horizontal blowout) -->
+  <div class="glow-container" aria-hidden="true">
+    <div class="glow-spot glow-cyan" style="top: -150px; left: 10%;"></div>
+    <div class="glow-spot glow-purple" style="top: 25%; right: -150px;"></div>
+    <div class="glow-spot glow-blue" style="top: 60%; left: -100px;"></div>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================== -->
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <a href="#hero" class="brand-logo" aria-label="JP DigiTech Solutions Home">
+        <div class="brand-icon-wrapper">
+          <img src="assets/images/logo.jpg" alt="JP DigiTech Logo" class="brand-icon" />
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">JP DIGITECH</span>
+          <span class="brand-tagline">SOLUTIONS</span>
+        </div>
+      </a>
+
+      <!-- Desktop & Mobile Menu -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#tech" class="nav-link">Tech Stack</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-glow">
+          <span>Start a Project</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <button class="hamburger" aria-label="Toggle navigation menu" id="hamburgerBtn">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION (With 3D Interactive Cyber Wave Canvas)
+         ========================================================================== -->
+    <section class="hero" id="hero">
+      <!-- Interactive Cyber Wave Canvas matching the logo's digital wave -->
+      <canvas id="heroWaveCanvas"></canvas>
+
+      <div class="container">
+        <div class="hero-grid-layout">
+          <div class="hero-content">
+            <!-- Availability Status Badge -->
+            <div class="hero-status-pill">
+              <span class="status-dot"></span>
+              <span class="status-text">Available for New Projects • Fast Turnaround</span>
+            </div>
+
+            <!-- Main Headline with Dynamic Typing Text -->
+            <h1 class="hero-title">
+              Architecting <br />
+              <span class="text-gradient">Next-Gen</span> <br />
+              <span class="hero-typewriter-wrapper">
+                <span id="typewriterText">High-Speed Web Platforms</span><span class="typewriter-cursor">|</span>
+              </span>
+            </h1>
+
+            <p class="hero-description">
+              At <strong>JP DigiTech Solutions</strong>, we engineer high-converting websites, native mobile
+              applications, and custom enterprise software designed to scale your business and accelerate revenue.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#services" class="btn btn-primary btn-glow">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Explore Our Services</span>
+              </a>
+
+              <a href="#contact" class="btn btn-secondary">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Get Free Consultation</span>
+              </a>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="hero-badges">
+              <div class="hero-badge-item">
+                <i class="fa-solid fa-bolt"></i>
+                <span>100/100 Lighthouse Performance</span>
+              </div>
+              <div class="hero-badge-item">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <span>iOS & Android Ready</span>
+              </div>
+              <div class="hero-badge-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Enterprise-Grade Security</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Glass Brand Card (Desktop) -->
+          <aside class="hero-visual" aria-hidden="true">
+            <div class="hero-glass-card">
+              <div class="hero-card-header">
+                <img src="assets/images/logo.jpg" alt="JP DigiTech" class="hero-card-logo" />
+                <div class="hero-card-meta">
+                  <h4>JP DigiTech Solutions</h4>
+                  <span>● SYSTEM STATUS: OPTIMAL</span>
+                </div>
+              </div>
+              <div class="hero-card-stats">
+                <div class="stat-mini-item">
+                  <span class="stat-mini-number">99.9%</span>
+                  <span class="stat-mini-label">Uptime Architecture</span>
+                </div>
+                <div class="stat-mini-item">
+                  <span class="stat-mini-number">&lt; 50ms</span>
+                  <span class="stat-mini-label">API Response Latency</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         LIVE STATS & METRICS RIBBON
+         ========================================================================== -->
+    <section class="stats-ribbon">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-box">
+            <div class="stat-number-wrapper">
+              <span class="stat-count" data-target="50">0</span><span class="stat-plus">+</span>
+            </div>
+            <div class="stat-label">Projects Delivered</div>
+            <div class="stat-subtext">Web, Mobile & Cloud Systems</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-number-wrapper">
+              <span class="stat-count" data-target="99">0</span><span class="stat-plus">.8%</span>
+            </div>
+            <div class="stat-label">Client Satisfaction</div>
+            <div class="stat-subtext">5-Star Client Reviews</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-number-wrapper">
+              <span class="stat-count" data-target="100">0</span><span class="stat-plus">%</span>
+            </div>
+            <div class="stat-label">On-Time Delivery</div>
+            <div class="stat-subtext">Agile Sprint Discipline</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-number-wrapper">
+              <span class="stat-count" data-target="24">0</span><span class="stat-plus">/7</span>
+            </div>
+            <div class="stat-label">Dedicated Support</div>
+            <div class="stat-subtext">Continuous Monitoring</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SERVICES SECTION (Matching Logo's Core Pillars + Modern Tech Suite)
+         ========================================================================== -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-code"></i>
+            <span>Core Capabilities</span>
+          </div>
+          <h2 class="section-title">
+            Engineering Solutions Built For <span class="text-gradient">Scale & Speed</span>
+          </h2>
+          <p class="section-subtitle">
+            From modern responsive web platforms to native cross-platform mobile apps and custom enterprise automation,
+            we turn complex technical requirements into seamless software.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Pillar 1: Website Development (From Logo) -->
+          <article class="service-card">
+            <div class="service-pillar-tag">Core Logo Pillar</div>
+            <div class="service-icon-box">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3 class="service-title">Website Development</h3>
+            <p class="service-desc">
+              Custom, blazing-fast web applications and conversion-driven portals engineered with modern frameworks for
+              zero latency and instant indexing.
+            </p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> Next.js, React & Tailwind CSS</li>
+              <li><i class="fa-solid fa-circle-check"></i> Sub-second page load speeds (LCP &lt; 0.8s)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Enterprise CMS & E-Commerce systems</li>
+              <li><i class="fa-solid fa-circle-check"></i> 100% Mobile responsive & touch optimized</li>
+            </ul>
+            <button class="service-link" data-open-modal="web_service">
+              <span>View Service Blueprint</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </article>
+
+          <!-- Pillar 2: Mobile App Development (From Logo) -->
+          <article class="service-card">
+            <div class="service-pillar-tag">Core Logo Pillar</div>
+            <div class="service-icon-box">
+              <i class="fa-solid fa-mobile-screen"></i>
+            </div>
+            <h3 class="service-title">Mobile App Development</h3>
+            <p class="service-desc">
+              High-performance iOS and Android applications crafted for 60/120fps fluidity, biometric security, and
+              native device capabilities.
+            </p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> Flutter & React Native cross-platform</li>
+              <li><i class="fa-solid fa-circle-check"></i> Native Apple iOS & Google Android apps</li>
+              <li><i class="fa-solid fa-circle-check"></i> Offline-first database synchronization</li>
+              <li><i class="fa-solid fa-circle-check"></i> App Store & Play Store publishing</li>
+            </ul>
+            <button class="service-link" data-open-modal="mobile_service">
+              <span>View Service Blueprint</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </article>
+
+          <!-- Pillar 3: Custom Digital Solutions (From Logo) -->
+          <article class="service-card">
+            <div class="service-pillar-tag">Core Logo Pillar</div>
+            <div class="service-icon-box">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h3 class="service-title">Custom Digital Solutions</h3>
+            <p class="service-desc">
+              Custom-tailored business software, multi-tenant SaaS platforms, and internal operational dashboards that
+              automate high-friction workflows.
+            </p>
+            <ul class="service-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> Multi-tenant SaaS architectures</li>
+              <li><i class="fa-solid fa-circle-check"></i> Custom CRM, ERP & booking systems</li>
+              <li><i class="fa-solid fa-circle-check"></i> RESTful & GraphQL microservice APIs</li>
+              <li><i class="fa-solid fa-circle-check"></i> Secure role-based permission controls</li>
+            </ul>
+            <button class="service-link" data-open-modal="saas_service">
+              <span>View Service Blueprint</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PORTFOLIO & CASE STUDIES
+         ========================================================================== -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-trophy"></i>
+            <span>Proven Track Record</span>
+          </div>
+          <h2 class="section-title">
+            Featured <span class="text-gradient">Case Studies & Live Projects</span>
+          </h2>
+          <p class="section-subtitle">
+            Explore live production systems and scalable digital platforms engineered by JP DigiTech Solutions for real businesses.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="portfolio-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="web">Web Platforms</button>
+          <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+          <button class="filter-btn" data-filter="saas">Custom SaaS</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="portfolio-grid">
+          <!-- Project 1: SHONEM Herbals IMS (Real Client) -->
+          <article class="project-card" data-category="saas">
+            <div class="project-image-box" style="background: linear-gradient(135deg, #051d14 0%, #0d3829 100%);">
+              <span class="project-category-badge">Custom Enterprise SaaS</span>
+              <span class="project-status-badge"><span class="status-dot-pulse"></span> Live Client</span>
+              <div class="project-preview-graphic" style="background: transparent;">
+                <div class="project-logo-badge">
+                  <img src="assets/images/portfolio/shonem-logo.png" alt="SHONEM Herbals Logo" style="max-height: 52px; width: auto; object-fit: contain;" onerror="this.onerror=null; this.src='assets/images/portfolio/shonem-logo-user.jpg';" />
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">SHONEM Herbals: Cloud IMS & B2B CRM</h3>
+              <p class="project-desc">
+                Enterprise Inventory Management System & B2B CRM engineered for Pune's organic wellness brand, handling multi-warehouse stock, raw materials, batch lot tracking, and dispatch automation.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React / Vite</span>
+                <span class="project-tag">Inventory Engine</span>
+                <span class="project-tag">Batch Tracking</span>
+                <span class="project-tag">B2B CRM</span>
+                <span class="project-tag">RBAC Security</span>
+              </div>
+              <div class="project-action-row">
+                <span class="project-metric"><i class="fa-solid fa-circle-check"></i> 99.9% Stock Accuracy</span>
+                <div class="project-actions-group">
+                  <a href="https://crm.shonemherbals.com/" target="_blank" rel="noopener noreferrer" class="project-live-btn" title="Open Live Portal">
+                    <span>Live Portal</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <button class="service-link" data-open-modal="case_shonem">
+                    <span>Case Study</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: New Seven Pharma (Real Client) -->
+          <article class="project-card" data-category="web">
+            <div class="project-image-box" style="background: linear-gradient(135deg, #064e3b 0%, #0369a1 100%);">
+              <span class="project-category-badge">Veterinary & Dairy Health</span>
+              <span class="project-status-badge"><span class="status-dot-pulse"></span> Live Client</span>
+              <div class="project-preview-graphic" style="background: transparent;">
+                <div class="project-logo-badge" style="background: rgba(15, 23, 42, 0.92); border: 1px solid rgba(56, 189, 248, 0.4); gap: 0.85rem; padding: 0.65rem 1.35rem;">
+                  <img src="assets/images/portfolio/newseven-logo.svg" alt="New Seven Pharma Logo" style="width: 44px; height: 44px; object-fit: contain;" />
+                  <div style="text-align: left;">
+                    <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1rem; color: #ffffff; letter-spacing: 0.5px; line-height: 1.1;">NEW SEVEN</div>
+                    <div style="font-size: 0.72rem; color: #38bdf8; font-weight: 600; text-transform: uppercase;">Pharma • Dhule</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">New Seven Pharma: Animal Health Suite</h3>
+              <p class="project-desc">
+                Comprehensive veterinary health & dairy equipment platform serving farmers across Dhule, featuring 1-click WhatsApp prescription uploads, cattle herd supplement estimators, and free farm delivery.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Veterinary Health</span>
+                <span class="project-tag">Dairy Equipment</span>
+                <span class="project-tag">Prescription Funnel</span>
+                <span class="project-tag">Supplement Calculator</span>
+                <span class="project-tag">Netlify Edge</span>
+              </div>
+              <div class="project-action-row">
+                <span class="project-metric"><i class="fa-solid fa-truck-fast"></i> Free Farm Delivery</span>
+                <div class="project-actions-group">
+                  <a href="https://newsevenpharmadhule.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-live-btn" title="Open Live Website">
+                    <span>Live Site</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <button class="service-link" data-open-modal="case_newseven">
+                    <span>Case Study</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Dhananjay Handwriting Classes (Real Client) -->
+          <article class="project-card" data-category="web">
+            <div class="project-image-box" style="background: linear-gradient(135deg, #161338 0%, #292161 100%);">
+              <span class="project-category-badge">Ed-Tech Web Platform</span>
+              <span class="project-status-badge"><span class="status-dot-pulse"></span> Live Client</span>
+              <div class="project-preview-graphic" style="background: transparent;">
+                <div style="display: flex; align-items: center; gap: 0.75rem; background: rgba(15, 23, 42, 0.88); border: 1px solid rgba(129, 140, 248, 0.4); padding: 0.55rem 1.15rem; border-radius: var(--radius-md); box-shadow: 0 8px 25px rgba(0,0,0,0.5);">
+                  <img src="assets/images/portfolio/dhananjay-logo.jpeg" alt="Dhananjay Classes Logo" class="project-preview-logo" style="border-radius: 50%; width: 44px; height: 44px; object-fit: cover; border: 2px solid rgba(129, 140, 248, 0.5);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                  <div style="text-align: left;">
+                    <div style="font-family: var(--font-heading); font-weight: 800; font-size: 0.95rem; color: #ffffff;">DHANANJAY</div>
+                    <div style="font-size: 0.72rem; color: #a5b4fc; font-weight: 600;">Handwriting Classes</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Dhananjay Handwriting Academy</h3>
+              <p class="project-desc">
+                Modern bilingual (English & Marathi) educational web platform featuring an interactive Before-vs-After student transformation gallery, curriculum explorer, and 1-click WhatsApp admissions.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Bilingual (EN/मराठी)</span>
+                <span class="project-tag">Before/After Gallery</span>
+                <span class="project-tag">WhatsApp Funnel</span>
+                <span class="project-tag">Netlify Edge</span>
+                <span class="project-tag">100/100 Lighthouse</span>
+              </div>
+              <div class="project-action-row">
+                <span class="project-metric"><i class="fa-solid fa-arrow-trend-up"></i> +340% Enrollments</span>
+                <div class="project-actions-group">
+                  <a href="https://dhananjayhandwritingclasses.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-live-btn" title="Open Live Website">
+                    <span>Live Site</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <button class="service-link" data-open-modal="case_dhananjay">
+                    <span>Case Study</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: ReFabriCo (Real Client) -->
+          <article class="project-card" data-category="web">
+            <div class="project-image-box" style="background: linear-gradient(135deg, #053026 0%, #0d5947 100%);">
+              <span class="project-category-badge">Sustainable D2C Platform</span>
+              <span class="project-status-badge"><span class="status-dot-pulse"></span> Live Client</span>
+              <div class="project-preview-graphic" style="background: transparent;">
+                <div class="project-logo-badge">
+                  <img src="assets/images/portfolio/refabrico-logo.png" alt="ReFabriCo Logo" style="max-height: 48px; width: auto; object-fit: contain;" />
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">ReFabriCo Sustainable Creations</h3>
+              <p class="project-desc">
+                Circular-fashion eco-platform turning cherished old clothes into handcrafted lifestyle creations, featuring real-time environmental impact counters, transformation workflows, and pickup booking.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Circular Fashion</span>
+                <span class="project-tag">Impact Counter</span>
+                <span class="project-tag">Interactive UI</span>
+                <span class="project-tag">Custom Booking</span>
+                <span class="project-tag">Tailwind</span>
+              </div>
+              <div class="project-action-row">
+                <span class="project-metric"><i class="fa-solid fa-seedling"></i> 5,000+ Reused</span>
+                <div class="project-actions-group">
+                  <a href="https://refabrico.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-live-btn" title="Open Live Website">
+                    <span>Live Site</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <button class="service-link" data-open-modal="case_refabrico">
+                    <span>Case Study</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: NovaPay Mobile Banking Suite -->
+          <article class="project-card" data-category="mobile">
+            <div class="project-image-box">
+              <div class="project-preview-graphic">
+                <i class="fa-solid fa-wallet" style="font-size: 3.5rem; color: #8b5cf6;"></i>
+              </div>
+              <span class="project-category-badge">Mobile App</span>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">NovaPay Banking Suite</h3>
+              <p class="project-desc">
+                Cross-platform iOS and Android mobile app with biometric authentication and real-time ledger
+                synchronization.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Flutter</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">WebSockets</span>
+                <span class="project-tag">AES-256</span>
+              </div>
+              <div class="project-action-row">
+                <span class="project-metric"><i class="fa-solid fa-bolt"></i> &lt; 50ms Latency</span>
+                <div class="project-actions-group">
+                  <button class="service-link" data-open-modal="case_fintech">
+                    <span>View Case Study</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: PulseOps Logistics ERP -->
+          <article class="project-card" data-category="saas">
+            <div class="project-image-box">
+              <div class="project-preview-graphic">
+                <i class="fa-solid fa-server" style="font-size: 3.5rem; color: #3b82f6;"></i>
+              </div>
+              <span class="project-category-badge">Enterprise SaaS</span>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">PulseOps Logistics ERP</h3>
+              <p class="project-desc">
+                Automated multi-branch logistics tracking with GPS telemetry, dispatch automation, and real-time
+                inventory alerts.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">PostgreSQL</span>
+                <span class="project-tag">Docker</span>
+                <span class="project-tag">AWS</span>
+              </div>
+              <div class="project-action-row">
+                <span class="project-metric"><i class="fa-solid fa-clock"></i> 22 hrs Saved/Wk</span>
+                <div class="project-actions-group">
+                  <button class="service-link" data-open-modal="case_saas">
+                    <span>View Case Study</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Apex Workout Tracker -->
+          <article class="project-card" data-category="mobile">
+            <div class="project-image-box">
+              <div class="project-preview-graphic">
+                <i class="fa-solid fa-dumbbell" style="font-size: 3.5rem; color: #f59e0b;"></i>
+              </div>
+              <span class="project-category-badge">Mobile App</span>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Apex Workout Tracker</h3>
+              <p class="project-desc">
+                Interactive workout companion with Apple Watch and WearOS telemetry synchronization and offline calorie
+                logging.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">HealthKit</span>
+                <span class="project-tag">Firebase</span>
+              </div>
+              <div class="project-action-row">
+                <span class="project-metric"><i class="fa-solid fa-star"></i> 4.9 App Store</span>
+                <div class="project-actions-group">
+                  <a href="#contact" class="service-link">
+                    <span>Discuss Similar</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE TECH STACK MATRIX
+         ========================================================================== -->
+    <section class="section" id="tech" style="background: rgba(8, 12, 24, 0.6);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-microchip"></i>
+            <span>Engineering Arsenal</span>
+          </div>
+          <h2 class="section-title">
+            Modern, Battle-Tested <span class="text-gradient">Technology Stack</span>
+          </h2>
+          <p class="section-subtitle">
+            We use industry-standard frameworks, cloud providers, and programming paradigms to build future-proof
+            software that doesn't break under load.
+          </p>
+        </div>
+
+        <!-- Tech Filter Tabs -->
+        <div class="tech-tabs">
+          <button class="tech-tab-btn active" data-tech-filter="all">All Technologies</button>
+          <button class="tech-tab-btn" data-tech-filter="frontend">Frontend & UI</button>
+          <button class="tech-tab-btn" data-tech-filter="mobile">Mobile Systems</button>
+          <button class="tech-tab-btn" data-tech-filter="backend">Backend & DB</button>
+        </div>
+
+        <!-- Tech Cards Grid -->
+        <div class="tech-grid">
+          <div class="tech-card" data-tech-category="frontend">
+            <i class="fa-brands fa-react" style="color: #61dafb;"></i>
+            <span class="tech-card-name">React.js</span>
+            <span class="tech-card-role">Frontend UI</span>
+          </div>
+
+          <div class="tech-card" data-tech-category="frontend">
+            <i class="fa-solid fa-n" style="color: #ffffff;"></i>
+            <span class="tech-card-name">Next.js</span>
+            <span class="tech-card-role">SSR & Edge Web</span>
+          </div>
+
+          <div class="tech-card" data-tech-category="frontend">
+            <i class="fa-brands fa-js" style="color: #f7df1e;"></i>
+            <span class="tech-card-name">TypeScript</span>
+            <span class="tech-card-role">Type Safety</span>
+          </div>
+
+          <div class="tech-card" data-tech-category="frontend">
+            <i class="fa-solid fa-wind" style="color: #38bdf8;"></i>
+            <span class="tech-card-name">Tailwind CSS</span>
+            <span class="tech-card-role">Styling System</span>
+          </div>
+
+          <div class="tech-card" data-tech-category="mobile">
+            <i class="fa-solid fa-feather-pointed" style="color: #54c5f8;"></i>
+            <span class="tech-card-name">Flutter</span>
+            <span class="tech-card-role">Cross-Platform</span>
+          </div>
+
+          <div class="tech-card" data-tech-category="mobile">
+            <i class="fa-brands fa-apple" style="color: #f1f5f9;"></i>
+            <span class="tech-card-name">iOS & Swift</span>
+            <span class="tech-card-role">Native Apple</span>
+          </div>
+
+          <div class="tech-card" data-tech-category="mobile">
+            <i class="fa-brands fa-android" style="color: #3ddc84;"></i>
+            <span class="tech-card-name">Android & Kotlin</span>
+            <span class="tech-card-role">Native Google</span>
+          </div>
+
+          <div class="tech-card" data-tech-category="backend">
+            <i class="fa-brands fa-node" style="color: #68a063;"></i>
+            <span class="tech-card-name">Node.js</span>
+            <span class="tech-card-role">API Services</span>
+          </div>
+
+          <div class="tech-card" data-tech-category="backend">
+            <i class="fa-brands fa-python" style="color: #3776ab;"></i>
+            <span class="tech-card-name">Python</span>
+            <span class="tech-card-role">Backend Logic</span>
+          </div>
+
+          <div class="tech-card" data-tech-category="backend">
+            <i class="fa-solid fa-database" style="color: #336791;"></i>
+            <span class="tech-card-name">PostgreSQL</span>
+            <span class="tech-card-role">Relational DB</span>
+          </div>
+
+          <div class="tech-card" data-tech-category="backend">
+            <i class="fa-solid fa-leaf" style="color: #47a248;"></i>
+            <span class="tech-card-name">MongoDB</span>
+            <span class="tech-card-role">NoSQL Database</span>
+          </div>
+
+          <div class="tech-card" data-tech-category="mobile">
+            <i class="fa-solid fa-fire" style="color: #ffca28;"></i>
+            <span class="tech-card-name">Firebase</span>
+            <span class="tech-card-role">Real-Time Data</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4-STEP ENGINEERING PROCESS
+         ========================================================================== -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-timeline"></i>
+            <span>Agile Delivery</span>
+          </div>
+          <h2 class="section-title">
+            Our Transparent <span class="text-gradient">4-Step Process</span>
+          </h2>
+          <p class="section-subtitle">
+            No endless meetings or hidden surprises. We follow a strict, milestone-driven development sprint cycle with
+            weekly progress demonstrations.
+          </p>
+        </div>
+
+        <div class="process-timeline">
+          <div class="process-step-card">
+            <div class="process-step-num">01</div>
+            <h3 class="process-step-title">Discovery & Strategy</h3>
+            <p class="process-step-desc">
+              We dissect your target audience, business goals, and technical requirements to formulate an architectural
+              roadmap and milestone timeline.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-num">02</div>
+            <h3 class="process-step-title">UI/UX & Prototyping</h3>
+            <p class="process-step-desc">
+              We design pixel-perfect clickable prototypes in Figma. You get to interact with every screen, transition,
+              and workflow before a line of code is written.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-num">03</div>
+            <h3 class="process-step-title">Agile Engineering & QA</h3>
+            <p class="process-step-desc">
+              We develop modular, clean code in rapid 1-2 week sprints with automated testing, continuous integration,
+              and cross-browser security verification.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-num">04</div>
+            <h3 class="process-step-title">Deployment & Scaling</h3>
+            <p class="process-step-desc">
+              We execute zero-downtime production launches with SSL certificates, automated backups, and 30-90 days of
+              dedicated post-launch support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TESTIMONIALS SLIDER
+         ========================================================================== -->
+    <section class="section" id="testimonials" style="background: rgba(10, 15, 30, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-comments"></i>
+            <span>Client Feedback</span>
+          </div>
+          <h2 class="section-title">
+            Trusted by Ambitious <span class="text-gradient">Founders & Brands</span>
+          </h2>
+          <p class="section-subtitle">
+            Here is what leaders say about collaborating with JP DigiTech Solutions.
+          </p>
+        </div>
+
+        <div class="testimonials-wrapper">
+          <div class="testimonial-card-container">
+            <div class="testimonial-track">
+              <!-- Slide 1: SHONEM Herbals -->
+              <div class="testimonial-slide">
+                <div class="testimonial-bubble">
+                  <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="testimonial-quote">
+                    "JP DigiTech engineered an outstanding cloud Inventory Management System (IMS) for SHONEM Herbals. Our multi-warehouse tracking, raw material batching, and distributor dispatch are now completely streamlined with 99.9% stock precision."
+                  </p>
+                  <div class="testimonial-author-row">
+                    <div class="author-avatar" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4);">SH</div>
+                    <div class="author-info">
+                      <h4>SHONEM Herbals Team</h4>
+                      <p>Operations & Logistics, Shonem Herbals Pvt. Ltd. (Pune)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2: Dhananjay Classes -->
+              <div class="testimonial-slide">
+                <div class="testimonial-bubble">
+                  <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="testimonial-quote">
+                    "Our new web platform transformed how students and parents discover Dhananjay Classes in Jalgaon. The interactive Before/After handwriting gallery and instant WhatsApp admission funnel surged our enrollment inquiries by +340% within 90 days."
+                  </p>
+                  <div class="testimonial-author-row">
+                    <div class="author-avatar" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4);">DC</div>
+                    <div class="author-info">
+                      <h4>Dhananjay Sir</h4>
+                      <p>Founder & Master Coach, Dhananjay Handwriting Classes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3: ReFabriCo -->
+              <div class="testimonial-slide">
+                <div class="testimonial-bubble">
+                  <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="testimonial-quote">
+                    "ReFabriCo needed a platform that merged sentimental craftsmanship with concrete environmental impact metrics. JP DigiTech delivered an exquisite, ultra-fast website that helped us divert over 5,000 garments from landfills with effortless pickup scheduling."
+                  </p>
+                  <div class="testimonial-author-row">
+                    <div class="author-avatar" style="background: rgba(20, 184, 166, 0.2); color: #5eead4; border: 1px solid rgba(20, 184, 166, 0.4);">RF</div>
+                    <div class="author-info">
+                      <h4>ReFabriCo Team</h4>
+                      <p>Sustainable D2C Initiative, ReFabriCo Creations</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4: New Seven Pharma -->
+              <div class="testimonial-slide">
+                <div class="testimonial-bubble">
+                  <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="testimonial-quote">
+                    "JP DigiTech built a seamless veterinary healthcare platform that empowers dairy farmers across Dhule to calculate cattle feed supplements and upload prescriptions directly via WhatsApp. Our delivery orders jumped by over 260%!"
+                  </p>
+                  <div class="testimonial-author-row">
+                    <div class="author-avatar" style="background: rgba(2, 132, 199, 0.2); color: #38bdf8; border: 1px solid rgba(2, 132, 199, 0.4);">NS</div>
+                    <div class="author-info">
+                      <h4>New Seven Pharma Team</h4>
+                      <p>Veterinary & Dairy Healthcare, Lalbaug, Dhule</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Controls -->
+          <div class="testimonial-nav">
+            <button class="slider-arrow-btn" id="prevSlide" aria-label="Previous testimonial">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="slider-dots"></div>
+            <button class="slider-arrow-btn" id="nextSlide" aria-label="Next testimonial">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE FAQ ACCORDION
+         ========================================================================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Got Questions?</span>
+          </div>
+          <h2 class="section-title">
+            Frequently Asked <span class="text-gradient">Questions</span>
+          </h2>
+          <p class="section-subtitle">
+            Everything you need to know about starting a project with JP DigiTech Solutions.
+          </p>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>How long does a website or mobile app project typically take?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Standard responsive business websites and MVPs typically take between 2 to 3 weeks. Full-scale
+                cross-platform mobile apps or custom multi-tenant SaaS platforms typically take 4 to 8 weeks depending
+                on the number of features and custom API integrations.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>Do I get 100% ownership of the code and intellectual property?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, absolutely. Once project payment milestones are complete, full intellectual property rights, source
+                code repositories (GitHub/GitLab), design assets (Figma files), and production server credentials are
+                transferred directly to you.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>Can I host this website completely for free?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! This website is engineered to be 100% static-host ready with zero backend dependencies. You can
+                host it completely free of cost with unlimited free bandwidth and free SSL on platforms like
+                <strong>Netlify</strong> (drag and drop in 30 seconds), <strong>GitHub Pages</strong>,
+                <strong>Vercel</strong>, or <strong>Cloudflare Pages</strong>. You can even connect your own custom
+                domain name (e.g. jpdigitech.com) for free!
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>Do you provide post-launch maintenance and technical support?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Every project comes with complimentary 30 days of post-launch bug fixing and monitoring. Additionally,
+                we provide flexible monthly maintenance packages covering software updates, security hardening, cloud
+                backups, and feature enhancements.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>How do milestone payments work?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </button>
+            <div class="faq-answer">
+              <p>
+                We typically work with structured milestones: 30% upfront deposit to commence architecture and UI/UX
+                design, 40% upon functional staging preview and testing approval, and the final 30% upon final
+                production deployment and code transfer.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn">
+              <span>Can you revamp or speed up my existing website or app?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! We conduct comprehensive technical audits covering Lighthouse scores, database queries, and UI
+                bottlenecks. We can either perform targeted speed optimization or migrate your legacy stack to modern
+                frameworks like Next.js or Flutter.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT & FREE CONSULTATION SECTION
+         ========================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Let's Build Something Great</span>
+          </div>
+          <h2 class="section-title">
+            Start Your Project with <span class="text-gradient">JP DigiTech</span>
+          </h2>
+          <p class="section-subtitle">
+            Have an idea or need an engineering partner? Reach out today for a free technical consultation and formal
+            quote within 24 hours.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Left: Contact Highlights & Quick Connect -->
+          <div class="contact-info-panel">
+            <div class="contact-highlight-box">
+              <h3>Fast Direct Communication</h3>
+              <p>
+                We value your time. When you contact JP DigiTech Solutions, you speak directly with senior software
+                architects, not commission-based salespeople.
+              </p>
+            </div>
+
+            <!-- WhatsApp Direct Card -->
+            <div class="contact-method-card">
+              <div class="contact-method-left">
+                <div class="contact-method-icon" style="background: rgba(37, 211, 102, 0.15); color: #25d366;">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="contact-method-details">
+                  <h4>WhatsApp Quick Chat</h4>
+                  <p>Instant direct chat response</p>
+                </div>
+              </div>
+              <a href="https://wa.me/919999999999?text=Hello%20JP%20DigiTech%20Solutions!%20I%20am%20interested%20in%20discussing%20a%20project."
+                target="_blank" rel="noopener noreferrer" class="btn btn-outline"
+                style="padding: 0.45rem 1rem; font-size: 0.82rem; border-color: #25d366; color: #25d366;">
+                <span>Chat Now</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <!-- Email Card -->
+            <div class="contact-method-card">
+              <div class="contact-method-left">
+                <div class="contact-method-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact-method-details">
+                  <h4>Official Email</h4>
+                  <a href="mailto:jpdigitechsolutions@gmail.com" class="email-link">jpdigitechsolutions@gmail.com</a>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="jpdigitechsolutions@gmail.com">
+                <i class="fa-regular fa-copy"></i>
+                <span>Copy</span>
+              </button>
+            </div>
+
+            <!-- Instagram Card -->
+            <div class="contact-method-card">
+              <div class="contact-method-left">
+                <div class="contact-method-icon" style="background: rgba(225, 48, 108, 0.15); color: #e1306c;">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="contact-method-details">
+                  <h4>Instagram</h4>
+                  <a href="https://www.instagram.com/jp_digitech_solutions/" target="_blank" rel="noopener noreferrer" class="email-link">@jp_digitech_solutions</a>
+                </div>
+              </div>
+              <a href="https://www.instagram.com/jp_digitech_solutions/" target="_blank" rel="noopener noreferrer" class="btn btn-outline"
+                style="padding: 0.45rem 1rem; font-size: 0.82rem; border-color: #e1306c; color: #e1306c;">
+                <span>Follow</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="contact-method-card">
+              <div class="contact-method-left">
+                <div class="contact-method-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="contact-method-details">
+                  <h4>Direct Hotline</h4>
+                  <p>+91 99999 99999</p>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="+919999999999">
+                <i class="fa-regular fa-copy"></i>
+                <span>Copy</span>
+              </button>
+            </div>
+
+            <!-- Office / Global Remote Info -->
+            <div class="contact-method-card">
+              <div class="contact-method-left">
+                <div class="contact-method-icon">
+                  <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="contact-method-details">
+                  <h4>Global Delivery</h4>
+                  <p>Serving clients globally across US, UK, India & Middle East</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-panel">
+            <!-- Form Success Feedback Alert -->
+            <div class="form-alert" id="formSuccessAlert" style="display: none;"></div>
+
+            <form id="contactForm" action="https://formsubmit.co/jpdigitechsolutions@gmail.com" method="POST">
+              <!-- FormSubmit Configuration -->
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_subject" value="New Project Inquiry - JP DIGITECH SOLUTIONS" />
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="contactName" class="form-label">Full Name *</label>
+                  <input type="text" id="contactName" name="name" class="form-input" placeholder="e.g. Alex Sharma" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label">Email Address *</label>
+                  <input type="email" id="contactEmail" name="email" class="form-input" placeholder="e.g. alex@company.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactService" class="form-label">Service Required *</label>
+                <div class="select-wrapper">
+                  <select id="contactService" name="service" class="form-select" required>
+                    <option value="" disabled selected>Select a Service...</option>
+                    <option value="Website Development">Website Development (Next.js / Web App)</option>
+                    <option value="Mobile App Development">Mobile App Development (iOS & Android)</option>
+                    <option value="Custom Digital Solutions">Custom Digital Solutions (SaaS / Portal)</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down select-arrow"></i>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Project Details & Objectives *</label>
+                <textarea id="contactMessage" name="message" class="form-textarea"
+                  placeholder="Tell us about your project, target audience, core features, or timeline..."
+                  required></textarea>
+              </div>
+
+              <div class="contact-form-actions">
+                <button type="submit" id="submitFormBtn" class="btn btn-primary btn-glow">
+                  <span>Submit Inquiry</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+
+                <button type="button" class="btn btn-secondary" id="sendViaWhatsAppBtn">
+                  <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
+                  <span>Send via WhatsApp</span>
+                </button>
+              </div>
+
+              <p class="form-notice">
+                🔒 Your privacy is guaranteed. We never share your data. NDA signed upon request.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand-col">
+          <div class="brand-logo">
+            <div class="brand-icon-wrapper">
+              <img src="assets/images/logo.jpg" alt="JP DigiTech Logo" class="brand-icon" />
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">JP DIGITECH</span>
+              <span class="brand-tagline">SOLUTIONS</span>
+            </div>
+          </div>
+          <p>
+            Engineering cutting-edge digital experiences: high-conversion websites, native cross-platform mobile apps,
+            and custom scalable cloud architectures.
+          </p>
+          <div class="footer-social-row">
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/jp_digitech_solutions/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#services" class="footer-link">Our Services</a></li>
+            <li><a href="#portfolio" class="footer-link">Case Studies</a></li>
+            <li><a href="#tech" class="footer-link">Technology Stack</a></li>
+            <li><a href="#process" class="footer-link">Our Process</a></li>
+            <li><a href="#faq" class="footer-link">FAQ</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Core Services -->
+        <div>
+          <h4 class="footer-col-title">Core Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services" class="footer-link">Website Development</a></li>
+            <li><a href="#services" class="footer-link">Mobile App Development</a></li>
+            <li><a href="#services" class="footer-link">Custom Digital Solutions</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter & Contact -->
+        <div>
+          <h4 class="footer-col-title">Stay Ahead</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+            Subscribe to receive tech insights, architecture blueprints, and design trends.
+          </p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Enter your email" class="newsletter-input" required />
+            <button type="submit" class="btn btn-primary" style="padding: 0.7rem 1.25rem;">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          &copy; 2026 JP DIGITECH SOLUTIONS. All rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security Standards</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       FLOATING QUICK ACTIONS (WhatsApp & Scroll To Top)
+       ========================================================================== -->
+  <aside class="floating-actions" aria-label="Floating Actions">
+    <a href="https://wa.me/919999999999?text=Hello%20JP%20DigiTech!%20I%20would%20like%20to%20discuss%20a%20project."
+      target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+  </aside>
+
+  <!-- ==========================================================================
+       MODAL WINDOW FOR CASE STUDIES & SERVICE BLUEPRINTS
+       ========================================================================== -->
+  <div class="modal-overlay" id="detailsModal">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-header">
+        <span class="modal-tag" id="modalTag">Case Study</span>
+        <h3 class="modal-title" id="modalTitle">Project Title</h3>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Dynamic Content Injected Here -->
+      </div>
+      <div class="modal-footer">
+        <a href="#contact" class="btn btn-primary"
+          onclick="document.getElementById('detailsModal').classList.remove('active'); document.body.style.overflow='';">
+          <span>Start Similar Project</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Google Firebase Analytics Engine -->
+  <script type="module" src="assets/js/firebase-analytics.js"></script>
+
+  <!-- Application Scripts -->
+  <script src="assets/js/particles-wave.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
